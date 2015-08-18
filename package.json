@@ -1,0 +1,10 @@
+{
+  "name": "basic_mongoose_app",
+  "dependencies": {
+    "body-parser": "^1.10.1",
+    "express": "^4.10.0",
+    "materialize-css": "^0.96.1",
+    "mongoose": "^4.0.1",
+    "pg": "^4.4.0"
+  }
+}

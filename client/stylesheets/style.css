@@ -1,0 +1,110 @@
+*{
+  font-family: sans-serif;
+}
+#container_login{
+  width: 100%;
+  height: 800px;
+  background-image: url('http://crossfitalpha1athlete.com/wp-content/uploads/2014/04/gabriel-grobben-crossfit-13.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 50px;
+}
+
+#login_register{
+  width: 700px;
+  height: 500px;
+  margin: 10px auto;
+  background-color: rgba(192,192,192,0.5);
+}
+
+#login, #register{
+  width: 325px;
+  height: 450px;
+  margin-left: 20px;
+  margin-top: 40px;
+  vertical-align: top;
+  display: inline-block;
+  opacity: 0.90;
+}
+
+#container_leaderboard{
+  width: 100%;
+  height: 800px;
+  background-image: url('http://crossfitperpetualondon.com/wp-content/uploads/2014/09/think-RF.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 50px;
+}
+
+#leaderboard{
+  margin: 10px auto;
+  width: 80%;
+  height: auto;
+  background-color: rgba(255,255,255,0.5);
+}
+
+#wod_list{
+  margin: 10px auto;
+  width: 80%;
+  height: auto;
+  background-color: rgba(255,255,255,0.5);
+}
+
+#add_wod{
+  margin-left: 145px;
+  background-color: rgba(255,255,255,0.5);
+  width: 30%;
+  height: auto;
+  padding: 10px;
+}
+
+#container_user{
+  width: 100%;
+  height: 800px;
+  background-image: url("http://vivendilab.com/wp-content/uploads/2014/05/bailey.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#user_record{
+  width: 700px;
+  height: 650px;
+  margin: 10px auto;
+  background-color: rgba(192,192,192,0.5);
+  padding-top: 20px;
+}
+
+#container_wod{
+  width: 100%;
+  height: 800px;
+  background-image: url("http://blog.girlswhodocrossfit.com/wp-content/uploads/2014/12/lauren-fisher-crossfit-7.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#wod_record{
+  width: 700px;
+  height: 650px;
+  margin: 10px auto;
+  background-color: rgba(192,192,192,0.5);
+  padding-top: 20px;
+}
+
+#user, #wod, #record{
+  width: 325px;
+  height: 600px;
+  margin-left: 20px;
+  margin-top: 40px;
+  vertical-align: top;
+  display: inline-block;
+  opacity: 0.90;
+}
+
+#input_record{
+  width: 90%;
+  height: 140px;
+}
+#wod_leaderboard{
+  width: 90%;
+  height: 440px;
+}

@@ -1,0 +1,19 @@
+<div ng-controller='wodsController'>
+<div class="modal-header">
+  <h3 class="modal-title">New WOD to come!</h3>
+</div>
+<div class="modal-body">
+    <form>
+      <p>Date: <input type='date' ng-model='newWod.date' class='form-control' /></p>
+      <p>Time: <input type='time' ng-model='newWod.time' class='form-control' /></p>
+      <p>Location: <input type='text' ng-model='newWod.location' class='form-control' /></p>
+      <p>Type: <input type='radio' ng-model='newWod.type' value='fortime'> For Time <input type='radio' ng-model='newWod.type' value='amrap'>  AMRAP <input type='radio' ng-model='newWod.type' value='emom'> EMOM <input type='radio' ng-model='newWod.type' value='1rm'> 1RM </p>
+      <p>Name: <input type='text' ng-model='newWod.name' class='form-control' /> </p>
+      <p style='vertical-align:top;'>Content: <textarea class='form-control' ng-model='newWod.content' rows='6'></textarea></p>
+    </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-click="addWod(); ok()" >Add WOD</button>
+  <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
+</div>

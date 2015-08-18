@@ -1,0 +1,66 @@
+<div ng-controller='wodsController'>
+<div id='container_wod'>
+  <div id='wod_record'>
+    <div><a ng-click='logout()' class='btn btn-warning' style='margin-left: 600px;'>Logout</a></div>
+    <div id='wod'>
+      <table class='table table-hover'>
+        <tr>
+          <td>Date: {{wod.date | date: 'EEE, MMM d, y'}}<td>
+        </tr>
+        <tr>
+          <td>Time: {{wod.time | date: 'shortTime'}}</td>
+        </tr>
+        <tr>
+          <td>Location: {{wod.location}}</td>
+        </tr>
+        <tr>
+          <td>Coach: {{wod.coach}}</td>
+        </tr>
+        <tr>
+          <td><h3>WOD</h3></td>
+        </tr>
+        <tr>
+          <td>{{wod.name}}</td>
+        </tr>
+        <tr>
+          <td>{{wod.content}}</td>
+        </tr>
+      </table>
+    </div>
+    <div id='record'>
+      <div id='input_record'>
+        <div ng-show='wod.type == "fortime"'>
+          <p>Please put your record in seconds without unit:<input type='text' ng-model='newRecord.time' class='form-control'></p>
+        </div>
+        <div ng-show='wod.type == "amrap"'>
+           <p>Please put your record in reps without unit:<input type='text' ng-model='newRecord.reps' class='form-control'></p>
+        </div>
+        <div ng-show='wod.type == "emom"'>
+          EMOM
+        </div>
+        <div ng-show='wod.type == "1rm"'>
+          1RM
+        </div>
+        <button class='btn btn-success' ng-click='addRecord()'>Add Record</button>
+      </div>
+      <div id='wod_leaderboard'>
+        <table class='table table-hover'>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Record</th>
+          </tr>
+          <tr ng-repeat='record in records'>
+            <td>{{$index + 1}}</td>
+            <td>{{record.first_name}} {{record.last_name}}</td>
+            <td ng-show='wod.type=="amrap"'>{{record.reps}}</td>
+            <td ng-show='wod.type=="fortime"'>{{record.time}}</td>
+          </tr>
+        </table>
+        <button class='btn btn-primary' ng-show='wod.completed == false' ng-click='submitRecords()'>Submit Records</button>
+        <button class='btn btn-info' ng-show='wod.completed == true'>Records already SUBMITTED!</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,62 @@
+<div ng-controller='usersController'>
+<div ng-controller='wodsController'>
+  <div id='container_leaderboard'>
+    <div id='leaderboard'>
+      <table class='table table-hover table-condensed'>
+        <tr>
+          <th>CROSSFIT UPENN LEADERBOARD</th>
+          <th></th>
+          <th></th>
+          <th><a ng-click='logout()' class='btn btn-warning pull-right'>Logout</a></th>
+        </tr>
+        <tr>
+          <th>Rank</th>
+          <th>Athelte</th>
+          <th>Score</th>
+          <th>Profile</th>
+        </tr>
+        <tr ng-repeat='user in users'>
+          <td>{{$index + 1}}</td>
+          <td>{{user.first_name}} {{user.last_name}}</td>
+          <td>{{user.score}}</td>
+          <td><a class='btn btn-primary' href="#/user/{{user.id}}">To Athelete Profile</a></td>
+        </tr>
+      </table>
+    </div>
+    <div style='margin-left:145px;'>
+      <a class='btn btn-info' ng-click='open()' ng-show='isMinsu()'>Add a WOD</a>  
+    </div>
+    <div id='wod_list'>
+      <table class='table table-hover table-condensed'>
+        <tr>
+          <th>WODS LISTS</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Location</th>
+          <th>Name</th>
+          <th>Coach</th>
+          <th>Status</th>
+          <th>WOD Page</th>
+        </tr>
+        <tr ng-repeat='wod in wods track by $index | filter: filter_name'>
+          <td ng-bind='wod.date | date: "EEE, MMM d, y"'></td>
+          <td ng-bind='wod.time | date: "shortTime"'></td>
+          <td ng-bind='wod.location'></td>
+          <td ng-bind='wod.name'></td>
+          <td ng-bind='wod.coach'></td>
+          <td>{{wod.participants}} / {{users.length}}</td>
+          <td><a class='btn btn-danger' href='#/wod/{{wod.id}}'>To WOD Page</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

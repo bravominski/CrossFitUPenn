@@ -1,0 +1,65 @@
+<div ng-controller='usersController'>
+<div id='container_user'>
+  <div id='user_record'>
+  <div><a ng-click='logout()' class='btn btn-warning' style='margin-left: 620px;'>Logout</a></div>
+    <div id='user'>
+      <table class='table table-hover'>
+        <tr>
+          <td>Name: {{user.first_name}} {{user.last_name}}<td>
+        </tr>
+        <tr>
+          <td>Email: {{user.email}}</td>
+        </tr>
+        <tr>
+          <td>Mobile: {{user.mobile}}</td>
+        </tr>
+        <tr>
+          <td>Score: {{user.score}}</td>
+        </tr>
+        <tr>
+          <td>Back Squat 1RM: </td>
+        </tr>
+        <tr>
+          <td>Deadlift 1RM: </td>
+        </tr>
+        <tr>
+          <td>Benchpress 1RM: </td>
+        </tr>
+        <tr>
+          <td>Clean 1RM: </td>
+        </tr>
+        <tr>
+          <td>Jerk 1RM: </td>
+        </tr>
+        <tr>
+          <td>Snatch 1RM: </td>
+        </tr>
+        <tr>
+          <td>Max Rep Pushups: </td>
+        </tr>
+        <tr>
+          <td>Max Rep Pullups: </td>
+        </tr>
+        <tr>
+          <td>100 Burpee Time: </td>
+        </tr>
+      </table>
+    </div>
+    <div id='record'>
+      <table class='table table-hover'>
+        <tr>
+          <th>Date</th>
+          <th>Name</th>
+          <th>Record</th>
+        </tr>
+        <tr ng-repeat='record in records'>
+          <td>{{record.date | date: "EEE, MMM d, y"}}</td>
+          <td>{{record.name}}</td>
+          <td ng-show='record.type=="amrap"'>{{record.reps}} reps</td>
+          <td ng-show='record.type=="fortime"'>{{record.time}} sec</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
