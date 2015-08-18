@@ -6,7 +6,6 @@ module.exports = (function () {
     index: function(req,res) {
       
       var results = [];
-
       // Get a Postgres client from the connection pool
       pg.connect(connectionString, function(err, client, done) {
 
